@@ -1,0 +1,47 @@
+
+snack  = "Pretzels"    
+price        = 2      
+quantity     = 15        
+available = True       
+
+print("Snack:", snack)
+print("Price in $", price)
+print("How many in Stock?", quantity)
+print("Available?", available)
+
+print(type(snack))
+print(type(price))
+print(type(quantity))
+print(type(available))
+
+
+
+amount_total = price * quantity
+print("Total value in $", amount_total)
+print("Discount! in $", price - 0.25)
+print("Double stock:", quantity * 2)
+
+
+# PART 3 — COMPARISON OPERATORS
+print("Is price under $5?", price < 2)
+print("More than 10 in stock?", quantity > 5)
+print("Is price exactly $2.75?", price == 1.50)
+
+
+# PART 4 — STRING OPERATIONS
+shop = "Munchies" + "  " + "On the Go!"
+print("Shop name:", shop)
+print("No. of letters printed on the snack", len(snack))
+print("The first letter is ", snack[0])
+print("The last letter is", snack[len(snack)-1])
+
+
+a = price
+b = 3
+print("Before it was", a, "and", b)
+
+temp    = a
+a = b
+b = temp
+
+print("And now, its! ", a, "and", b)

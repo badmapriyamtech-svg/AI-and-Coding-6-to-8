@@ -1,0 +1,13 @@
+
+print("Your Codingal Programming journey starts here!")
+
+
+print(10)
+
+
+print("We can print numbers as well \n")
+
+
+print("We have many keywords in Python that does the most of the Heavy lifting!")
+import keyword
+print(keyword.kwlist)
