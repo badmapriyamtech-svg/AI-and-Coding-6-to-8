@@ -1,0 +1,18 @@
+
+
+# 5!=5*4*3*2*1
+#1!=1
+
+def fact(n):
+
+   if n==0:
+      return 1
+   else:
+      x=n*fact(n-1) 
+      return x         # 5*4! -->"Hey what is 4!" ? It is 4*3! . But what is 3! ?--> It is 3*2!. But what is 2! ? -->It is 2*1! But what is 1! ? --> It is 1*0! 
+                       #We know 0!=1. So, 1!=1, 2!=2 , 3!=6,.......
+
+print(fact(5))      
+
+      
+      

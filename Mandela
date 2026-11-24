@@ -1,0 +1,55 @@
+
+import turtle
+import colorsys
+
+screen = turtle.Screen()
+screen.bgcolor("black")
+screen.title("Mandala")
+screen.setup(1000, 1000)
+
+t = turtle.Turtle()
+t.speed(500)
+t.hideturtle()
+
+for i in range(500):
+    hue = i / 500
+    r,g,b = colorsys.hsv_to_rgb(hue, 1, 1)
+
+    t.pencolor(r,g,b)
+    t.pensize(1)
+    t.forward(i * 2)
+    t.right(95)
+
+t.penup()
+t.goto(-30, -20)
+t.setheading(90)
+t.pendown()
+
+t.color("red")
+t.begin_fill()
+
+for i in range(5):
+    t.forward(80)
+    t.right(144)
+
+t.end_fill()
+for i in range(36):
+    t.color("red")
+    t.begin_fill()
+
+    t.circle(35, 60)
+    t.left(120)
+    t.circle(35, 60)
+
+    t.end_fill()
+
+    t.penup()
+    t.goto(0, 0)
+    t.right(10)
+t.penup()
+t.goto(0, 0)
+t.setheading(0)
+
+
+
+turtle.done()

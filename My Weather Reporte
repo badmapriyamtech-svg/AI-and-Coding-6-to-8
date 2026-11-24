@@ -1,0 +1,67 @@
+
+city = input("City name: ")
+temp = float(input("Your City Temp. today is "))
+
+
+
+if temp > 35:
+    print("Warning: UV Index High. Super Hot!")
+
+
+
+if temp > 25:
+    print("Todays Update: Awesome day for a day out")
+else:
+    print("Todays Update: You better need an Umbrella or a Jacket.")
+
+
+
+if temp > 35:
+    print("Weather: Scorching Hot")
+elif temp > 25:
+    print("Weather: Warm and Sunny")
+elif temp > 15:
+    print("Weather: Cool and Breezy")
+else:
+    print("Weather: Cold - stay warm!")
+
+
+
+import datetime
+import calendar
+
+now = datetime.datetime.now()
+print("City:", city)
+print("Time now:", now)
+
+
+print("datetime.datetime.now " ,now.day,now.month,now.year)
+print("Today of the week is " ,now.strftime('%A')) 
+
+print("today date in the format of dateth-Month name-year", now.strftime('%dth-%B-%Y'))
+
+
+
+d=datetime.date.today()
+print("date class ", d)
+dt=datetime.datetime.now()
+print("datetime class ", dt)
+
+
+print(d.month,d.year,d.day)
+
+print(dt.day,dt.month,dt.year)
+
+m=dt.minute
+h=dt.hour
+s=dt.second
+
+t=datetime.time(int(h),int(m),int(s))
+print(t)
+
+
+
+
+print(calendar.calendar(now.year+1))
+print(calendar.month(now.year, now.month))
+print(calendar.calendar(1994))

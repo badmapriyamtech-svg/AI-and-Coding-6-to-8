@@ -1,0 +1,36 @@
+
+print("Hey there! Thanks for visitng me.")
+name=input("Name please")
+mood = input("Happy? Sad? Anxious? Depressed? Scared ?")
+energy = int(input("Energy level from 1 to 10: "))
+
+if energy==1:
+    advice='I get it! We all have low energy days.Get rest! If frequent consult a Doctor immediately!'
+    print(advice)
+elif energy<=4 :
+    advice='You have enough energy to move on with your day. But make sure you pause, hydrate and do your stuffs'
+    print(advice)
+else :
+    advice='Woah! Thats too much to handle. Just dont take any important decision for now. Take deep breaths then and there.'
+    print(advice)
+
+if mood.lower() == "happy":
+    advice = 'Great! But dont be optimistic always. Better to thing of the other side of the coin as well'
+elif mood.lower() == "sad":
+    advice = "Hey! Talk to me. But, more advisable is to pour out why you are sad to the person you Love ASAP!"
+elif mood.lower() == "anxious":
+    advice = "Stop worrying about things you can not control. If you can control, do it step by step. Not everything at a time!"
+elif mood.lower() == "depressed":
+    advice = "WARNING! Contact a medical professional IMMEDIATLY!"
+elif mood.lower() == "scared":
+    advice = "If you feel you are in some kind of dange, contact your local authorities immediately. If not, talk with the person who is responsible for this feeling, and solve it!"
+else:
+    advice = "Ha ha ! May be your energy level has reached the sky! Take care"
+
+import datetime
+
+today = datetime.datetime.now()
+
+print("\n Daily Mood Advisor")
+print('Hey ',name,'.Today is ',today,'. You feel', mood,'. And your energy level is ',energy,'. My advice for the day will be',advice.upper())
+

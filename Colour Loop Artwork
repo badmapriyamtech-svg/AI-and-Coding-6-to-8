@@ -1,0 +1,33 @@
+
+import turtle
+screen = turtle.Screen()
+screen.bgcolor("black")
+screen.title("Rainbow Colour Loop Artwork")
+screen.setup(900, 900)
+t = turtle.Turtle()
+t.speed(0)
+t.pensize(2)
+
+def petal():
+    t.begin_fill()
+    t.circle(70, 70)
+    t.left(120)
+    t.circle(70, 70)
+    t.end_fill()
+colors = [
+    "red", "orange", "yellow", "green",
+    "cyan", "blue", "purple", "magenta"
+]
+total_petals = 120
+for i in range(total_petals):
+
+   
+    color = colors[i % len(colors)]
+    t.color(color)
+
+    
+    petal()
+   
+    t.left(360 / total_petals)
+t.hideturtle()
+turtle.done()

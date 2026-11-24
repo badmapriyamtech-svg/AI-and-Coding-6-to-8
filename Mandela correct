@@ -1,0 +1,68 @@
+
+import turtle
+import colorsys
+
+# PART 1: Set up the canvas
+screen = turtle.Screen()
+screen.bgcolor("black")
+screen.title("Neon Mandala")
+screen.setup(800, 800)
+
+t = turtle.Turtle()
+t.speed(0)
+t.hideturtle()
+
+# PART 2: Draw a glowing colour spiral
+for i in range(300):
+    hue = i / 300
+    r, g, b = colorsys.hsv_to_rgb(hue, 1, 1)
+
+    t.pencolor(r, g, b)
+    t.pensize(3)
+    t.forward(i * 1.5)
+    t.right(91)
+
+# PART 3: Draw a gold filled 5-pointed star
+t.penup()
+t.goto(-30, -10)
+t.setheading(90)
+t.pendown()
+
+t.color("gold")
+t.begin_fill()
+
+for i in range(5):
+    t.forward(80)
+    t.right(150)
+
+t.end_fill()
+
+# PART 4: Draw 36 colourful filled petals
+t.penup()
+t.goto(0, 0)
+t.setheading(0)
+
+for i in range(36):
+    hue = i / 36
+    r, g, b = colorsys.hsv_to_rgb(hue, 1, 1)
+
+    t.color(r, g, b)
+    t.penup()
+    t.forward(150)
+    t.pendown()
+
+    t.begin_fill()
+    t.circle(20, 60)
+    t.left(110)
+    t.circle(20, 60)
+    t.end_fill()
+
+    t.penup()
+    t.goto(0, 0)
+    t.right(10)
+
+# PART 5: Finish the artwork
+t.penup()
+t.goto(0, 0)
+
+turtle.done()

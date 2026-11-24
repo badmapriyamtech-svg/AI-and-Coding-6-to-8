@@ -1,0 +1,71 @@
+
+ 
+customer = "Joseph"        # str - text
+destination = "Maryland"             # str - text
+price = 500        # float - decimal number
+quantity = 2          # int - whole number
+availability=True             # bool - True or False
+ 
+print("Name of the Passenger:", customer)
+print("Destination:", destination)
+print("Ticket Price $", price)
+print("Number of Tickets:", quantity)
+print("Possibility of booking?", availability)
+ 
+print(type(customer))
+print(type(destination))
+print(type(price))
+print(type(quantity))
+print(type(availability))
+ 
+
+total = price * quantity
+off=100
+new_total = total- off
+ 
+print("\nTotal Cost: Rs", total)
+print("Discount: Rs", off)
+print("Final Cost: Rs", new_total)
+
+print("......Be noted on the i nformation regarding price changes here......")
+print("Couple ticket costs $", (new_total * 2)-100)
+print("Ticket cost changes during festive seasons. We reduce the cost to Half!! $", new_total/2)
+print("Ticket booked before 2 hours will add on extra 100 $ ", new_total / 2)
+ 
+print("...FAQs..")
+
+print("No. of tickets = ? If true then you are elligible for Couple Ticket cost", quantity==2)
+print("The total cost before discount is more than 500$ ? Then you can get offers in Food and Snacks", total>500)
+print("The total cost after the discount more than 1000$ Then you can get free Food and Snacks unlimited", 1000<new_total)
+ 
+print("........Tickets details.......")
+name=customer + " " + customer[0]
+print(name, " Welcome sir/madam!")
+print('You are travelling to ',destination)
+print(name.lower(),' Thanks for choosing us!')
+print(name.upper()," LET THE JOURNEY BEGIN!!!!!!")
+print(len(name) ,' is your Length of your name')
+
+
+
+print("IMPORTANT! Few Price changes are updated. The Morning and Evening prices are swapped as per the customers requests!!!")
+mp = 500
+ep=250
+print("\nBefore:")
+print("Morning Ticket Cost $", mp)
+print("Evening Ticket Cost $", ep)
+mp,ep=ep,mp
+ 
+print("\nAfter:")
+print("Morning Ticket Cost $", mp)
+print("Evening Ticket Cost $", ep)
+ 
+
+
+print("Itineray")
+print("....................")
+print("Passenger:", customer)
+print("Destination:", destination)
+print("Tickets Booked:", quantity)
+print("Cost paid finally after discounts and cost changes", new_total)
+print("Ticket confirmation??", availability)

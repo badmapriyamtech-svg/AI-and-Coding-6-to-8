@@ -1,0 +1,35 @@
+# Armstrong Number Checker
+
+
+#An Armstrong number is a number that equals the sum of its digits, 
+ #each raised to the power of the number of digits. 
+ # Example: 370 has 3 digits, so 3 to the power 3 + 7 to the power 3 + 0 to the power 3 = 27 + 343 + 0 = 370. 
+ # The sum is the same as the number, so 370 is an Armstrong number.
+print("===== ARMSTRONG NUMBER CHECKER =====")
+
+x=int(input("Enter the number"))
+usernum=x
+print('x,usernum is ', x,usernum)
+x_no=len(str(x))
+print(x_no)
+
+#or, logical way is
+counter=0
+x_c=x
+while x_c>0:
+    x_c=x_c//10
+    counter=counter+1
+
+
+
+a=1
+arm=0
+
+while (x//10)>0:
+    a=x%10
+    x=x//10
+    arm=arm+a**x_no
+arm=arm+(x**x_no)
+print("arm formula no. is ", arm)
+print("you entered", usernum)
+print(arm==usernum)

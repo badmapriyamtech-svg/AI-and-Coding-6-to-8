@@ -1,0 +1,12 @@
+import calendar
+import datetime
+
+x=datetime.datetime.now()
+
+print("it is ", x.month)
+
+print(calendar.calendar(x.year+1))
+print(calendar.month(x.year, x.month))
+
+
+print(calendar.calendar(1994))
