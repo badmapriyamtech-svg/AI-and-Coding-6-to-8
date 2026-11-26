@@ -11,3 +11,9 @@ print("My Fav player is Lamal")
 print("3+5 ",3+5)
 print("10+5 ",10-5)
 
+#() - > PRINT IT PRINTS WHAT EVER WE GIVE
+#"()"" - () 
+print("Hello World") #print function
+name='Deven'  # variable
+print('Hello',name,".")
+print(f'Hello {name}')   # (f'ksjksjdnf {name}')
