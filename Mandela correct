@@ -1,8 +1,6 @@
 
 import turtle
 import colorsys
-
-# PART 1: Set up the canvas
 screen = turtle.Screen()
 screen.bgcolor("black")
 screen.title("Neon Mandala")
@@ -11,8 +9,6 @@ screen.setup(800, 800)
 t = turtle.Turtle()
 t.speed(0)
 t.hideturtle()
-
-# PART 2: Draw a glowing colour spiral
 for i in range(300):
     hue = i / 300
     r, g, b = colorsys.hsv_to_rgb(hue, 1, 1)
@@ -21,8 +17,6 @@ for i in range(300):
     t.pensize(3)
     t.forward(i * 1.5)
     t.right(91)
-
-# PART 3: Draw a gold filled 5-pointed star
 t.penup()
 t.goto(-30, -10)
 t.setheading(90)
@@ -60,8 +54,6 @@ for i in range(36):
     t.penup()
     t.goto(0, 0)
     t.right(10)
-
-# PART 5: Finish the artwork
 t.penup()
 t.goto(0, 0)
 
